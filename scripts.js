@@ -82,7 +82,6 @@ let body = document.querySelector('body');
 let show_logIn_window = function () {
   overlay.classList.remove('hidden');
   modalWindow.classList.remove('hidden');
-  body.style.overflow = 'hidden';
 };
 
 let hide_logIn_window = function () {
@@ -92,8 +91,9 @@ let hide_logIn_window = function () {
 };
 
 for (let i = 0; i < openBtn.length; i++) {
-  openBtn[i].addEventListener('click', show_logIn_window);
-
+  openBtn[i].addEventListener('click', () => {
+    show_logIn_window();
+  });
   closeBtn.addEventListener('click', hide_logIn_window);
 }
 
@@ -140,6 +140,7 @@ hide_logUp_window = function () {
 logInLink.addEventListener('click', () => {
   hide_logUp_window();
   show_logIn_window();
+  body.style.overflow = 'hidden';
 });
 
 closeRegisterBtn.addEventListener('click', hide_logUp_window);
@@ -147,6 +148,7 @@ closeRegisterBtn.addEventListener('click', hide_logUp_window);
 registerLink.addEventListener('click', show_logUp_window);
 
 // Механика
+
 // создаем пустой массив
 account = {};
 // добавляем по кнопке добавление данных в local storage
@@ -156,6 +158,7 @@ registerModalWindowBtn.addEventListener('click', (e) => {
   account.password = passLogUp.value;
   hide_logUp_window();
   show_logIn_window();
+  body.style.overflow = 'hidden';
   let addAccountData = localStorage.setItem(
     'accounts',
     JSON.stringify(account)
@@ -179,6 +182,11 @@ logInBtn.addEventListener('click', (e) => {
     cabinet.textContent = 'ЛИЧНЫЙ КАБИНЕТ';
     cabinet.classList.add('hidden');
     cabinetHover.classList.remove('hidden');
+    logInPhoneDiv.classList.add('hidden');
+    logInPhone.classList.add('hidden');
+    CabinetPhoneDiv.classList.remove('hidden');
+    CabinetPhone.classList.remove('hidden');
+    modalWindow.classList.add('hidden');
     hide_logIn_window();
   } else {
     logInAlert.classList.add('log-in-alert_active');
@@ -190,12 +198,17 @@ logInBtn.addEventListener('click', (e) => {
 
 cabinet.addEventListener('click', () => {
   show_logIn_window();
+  body.style.overflow = 'hidden';
 });
-
-cabinetHover.addEventListener('click', () => {
+// открытие личного кабинета
+const cabinetOpen = function () {
   firstPage.classList.add('hidden');
   secondPage.classList.remove('hidden');
   Body.style.backgroundColor = 'rgb(65, 65, 65)';
+};
+
+cabinetHover.addEventListener('click', () => {
+  cabinetOpen();
 });
 
 // Sticky nav
@@ -349,8 +362,11 @@ if (BMI <= 18) {
 const trainingBtn = document.querySelector('.training-btn');
 const trainingAlert = document.querySelector('.training-alert');
 
-trainingBtn.addEventListener('click', () => {
-  if (cabinet.classList.contains('hidden')) {
+const trainingBtnFunction = function (e) {
+  if (
+    cabinet.classList.contains('hidden') ||
+    logInPhone.classList.contains('hidden')
+  ) {
     window.location.href = 'training/index.html';
   } else {
     trainingAlert.classList.add('training-alert_active');
@@ -358,6 +374,9 @@ trainingBtn.addEventListener('click', () => {
       trainingAlert.classList.remove('training-alert_active');
     }, 3000);
   }
+};
+trainingBtn.addEventListener('click', () => {
+  trainingBtnFunction();
 });
 
 // График
@@ -402,4 +421,28 @@ let myChart = new Chart(ctx, {
       },
     },
   },
+});
+
+//кнопка вход (телефон)
+const logInPhone = document.getElementById('vhod-phone');
+const logInPhoneDiv = document.getElementById('vhod-phone-div');
+const CabinetPhone = document.getElementById('private-cabinet');
+const CabinetPhoneDiv = document.getElementById('private-cabinet-div');
+const logInPhoneBtn = document.getElementById('vhod-phone-btn');
+
+logInPhoneBtn.addEventListener('click', () => {
+  show_logIn_window();
+});
+// кнопка тренировки (телефон)
+const trainingBtnPhone = document.getElementById('training-btn_');
+// const trainingAlert = document.querySelector('.training-alert');
+
+trainingBtnPhone.addEventListener('click', (e) => {
+  e.preventDefault();
+  trainingBtnFunction();
+});
+
+// открытие личного кабинета (телефон)
+CabinetPhone.addEventListener('click', () => {
+  cabinetOpen();
 });

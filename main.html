@@ -38,6 +38,7 @@
         </nav>
       </header>
       <div class="training-alert">Сначала авторизуйтесь!</div>
+
       <!-- нав гамбургер -->
       <nav>
         <ul class="nav-menu">
@@ -45,18 +46,18 @@
 
           <div></div>
           <li class="nav_names">
-            <a href="training/index.html" class="training-btn">ТРЕНИРОВКИ</a>
+            <a id="training-btn_" class="training-btn">ТРЕНИРОВКИ</a>
           </li>
 
-          <div></div>
-          <li class="nav_names">
-            <a href="#" class="cabinet_2 hidden">ЛИЧНЫЙ <br />КАБИНЕТ</a>
+          <div class=""></div>
+          <li id="private-cabinet" class="nav_names hidden">
+            <a href="#" class="cabinet_2">ЛИЧНЫЙ <br />КАБИНЕТ</a>
           </li>
-          <div></div>
-          <li class="nav_names">
-            <a href="#" class="cabinet">ВОЙТИ</a>
+          <div id="private-cabinet-div" class="hidden"></div>
+          <li id="vhod-phone" class="nav_names">
+            <a href="#" id="vhod-phone-btn" class="cabinet">ВОЙТИ</a>
           </li>
-          <div></div>
+          <div id="vhod-phone-div"></div>
         </ul>
       </nav>
       <div class="hamburger">
@@ -66,6 +67,7 @@
       </div>
       <a href="#"><img src="img/icon.png" class="main-icon" /></a>
 
+      <!-- слайдер -->
       <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
           <button
@@ -269,6 +271,7 @@
       </div>
       <div id="avatarPreview"></div>
 
+      <!-- параметры -->
       <ul class="parameters">
         <li id="name-li">Имя: Евгений</li>
         <li id="age-li">Возраст: 42</li>
@@ -276,16 +279,17 @@
         <li id="height-li">Рост: 175</li>
       </ul>
       <ul class="settings">
-        <li>
+        <li class="calc">
           <a href="#"><img src="img/calc.svg" alt="" /></a>
         </li>
         <li class="open-settings">
           <a href="#"><img src="img/Frame.svg" alt="" /></a>
         </li>
       </ul>
+      <!-- стрелка назад -->
       <img src="img/back-arrow-svgrepo-com 1.svg" class="back-arrow" />
 
-      <!-- настройки -->
+      <!-- настройки модал-->
       <div class="modal_window_settings hidden">
         <button class="close-settings-window">&times;</button>
         <form>
@@ -351,6 +355,7 @@
           </div>
         </div>
       </div>
+      <!-- права -->
       <span class="rights-2">©Cardio corp. All rigths reserved.</span>
 
       <!-- График -->

@@ -572,6 +572,10 @@ table {
   margin-right: 0;
 }
 
+.rights-2-phone {
+  display: none;
+}
+
 .modal-window_register {
   position: absolute;
   top: 50%;
@@ -956,7 +960,7 @@ table {
   display: none;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 600px) {
   .main-icon {
     max-width: 160px;
     height: 84px;
@@ -970,7 +974,7 @@ table {
     top: 200px;
   }
   .slider-btn {
-    left: 175px;
+    left: 150px;
     top: 580px;
     max-width: 200px;
     max-height: 80px;
@@ -1074,5 +1078,131 @@ table {
     top: 630px;
     left: 30px;
     font-size: 20px;
+  }
+  #private-cabinet-div {
+    margin-top: 70px;
+  }
+  #training-btn_:hover {
+    cursor: pointer;
+  }
+  .training-alert {
+    max-width: 300px;
+    font-size: 25px;
+    left: 22%;
+  }
+  .log-in-alert {
+    max-width: 360px;
+    font-size: 21px;
+    left: 16%;
+    z-index: 165;
+  }
+  .modal_window {
+    top: 350px;
+    left: 265px;
+    width: 300px;
+    height: 500px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-right: 2rem;
+    z-index: 160;
+    opacity: 1;
+  }
+  .modal_window form input {
+    width: 185px;
+    right: 40px;
+    margin-bottom: 30px;
+  }
+  .modal_window p {
+    position: relative;
+    right: 35px;
+    max-width: 250px;
+    margin-top: 40px;
+  }
+  .modal_window img {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    right: 25px;
+  }
+  .modal-window_register {
+    top: 350px;
+    left: 265px;
+    width: 300px;
+    height: 500px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-right: 2rem;
+    z-index: 160;
+    opacity: 1;
+  }
+  .modal-window_register form input {
+    width: 185px;
+    position: relative;
+    right: 40px;
+    margin-bottom: 30px;
+  }
+  .modal-window_register p {
+    position: relative;
+    right: 35px;
+    max-width: 250px;
+    margin-top: 40px;
+  }
+  .overlay {
+    display: none;
+    z-index: 150;
+  }
+  .modal_window_btn {
+    position: relative;
+    display: inline-block;
+    right: 39px;
+    width: 185px;
+  }
+  .register_window_btn {
+    position: relative;
+    display: inline-block;
+    right: 39px;
+    width: 185px;
+  }
+}
+@media (max-width: 625px) {
+  #second_page {
+    max-width: 525px;
+    height: 1655px;
+  }
+  .settings {
+    position: absolute;
+    flex-direction: column;
+    gap: 40px;
+    top: 65px;
+    left: 355px;
+  }
+  .settings li a img {
+    width: 80px;
+    height: 80px;
+  }
+  #myChart {
+    position: absolute;
+    top: 600px;
+    left: 20px;
+    max-width: 490px;
+  }
+  .parameters {
+    flex-direction: row;
+    gap: 30px;
+    left: 0;
+    top: 450px;
+    font-size: 24px;
+  }
+  .back-arrow {
+    top: 1450px;
+    left: 50px;
+  }
+  .rights-2 {
+    position: absolute;
+    display: flex;
+    top: 1600px;
+    left: 50px;
+    font-size: 18px;
+    color: white;
   }
 }/*# sourceMappingURL=styles.css.map */
