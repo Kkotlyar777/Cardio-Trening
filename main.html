@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>КАРДИО</title>
+    <link rel="shortcut icon" type="image/png" href="img/icon.png" />
+    <link rel="stylesheet" href="sass/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body style="background-color: #000000">
+    <section id="first_page">
+      <div class="overlay hidden"></div>
+      <!-- Первая секция -->
+      <header class="sticky_nav">
+        <nav class="nav-menu_main">
+          <ul>
+            <li>
+              <a href="#">ГЛАВНАЯ</a>
+            </li>
+            <li>
+              <a href="#" class="training-btn">ТРЕНИРОВКИ</a>
+            </li>
+            <li>
+              <a href="#" class="cabinet">ВОЙТИ</a>
+            </li>
+            <li>
+              <a href="#" class="cabinet_2 hidden">ЛИЧНЫЙ <br />КАБИНЕТ</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="training-alert">Сначала авторизуйтесь!</div>
+      <!-- нав гамбургер -->
+      <nav>
+        <ul class="nav-menu">
+          <li class="nav_names"><a href="#">ГЛАВНАЯ</a></li>
+
+          <div></div>
+          <li class="nav_names">
+            <a href="training/index.html" class="training-btn">ТРЕНИРОВКИ</a>
+          </li>
+
+          <div></div>
+          <li class="nav_names">
+            <a href="#" class="cabinet_2 hidden">ЛИЧНЫЙ <br />КАБИНЕТ</a>
+          </li>
+          <div></div>
+          <li class="nav_names">
+            <a href="#" class="cabinet">ВОЙТИ</a>
+          </li>
+          <div></div>
+        </ul>
+      </nav>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <a href="#"><img src="img/icon.png" class="main-icon" /></a>
+
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/01 1.png" class="d-block w-100" alt="..." />
+
+            <button class="slider-btn">ВОЙТИ</button>
+            <h1 class="slider-title">Присоединяйтесь к КАРДИО</h1>
+            <div class="content-slider-text"></div>
+            <p class="content-slider-par">
+              Кроссфит настолько эффективен, что кажется магией, но все, что мы
+              делаем, основано на науке. Наша фитнес-программа может быть
+              использована для достижения любой цели, от улучшения здоровья до
+              снижения веса и повышения производительности.
+            </p>
+          </div>
+          <div class="carousel-item">
+            <img src="img/02 1.png" class="d-block w-100" alt="..." />
+
+            <button class="slider-btn">ВОЙТИ</button>
+            <h1 class="slider-title">Присоединяйтесь к КАРДИО</h1>
+            <div class="content-slider-text"></div>
+            <p class="content-slider-par">
+              Кроссфит настолько эффективен, что кажется магией, но все, что мы
+              делаем, основано на науке. Наша фитнес-программа может быть
+              использована для достижения любой цели, от улучшения здоровья до
+              снижения веса и повышения производительности.
+            </p>
+          </div>
+          <div class="carousel-item">
+            <img src="img/03 1.png" class="d-block w-100" alt="..." />
+            =
+            <button class="slider-btn">ВОЙТИ</button>
+            <h1 class="slider-title">Присоединяйтесь к КАРДИО</h1>
+            <div class="content-slider-text"></div>
+            <p class="content-slider-par">
+              Кроссфит настолько эффективен, что кажется магией, но все, что мы
+              делаем, основано на науке. Наша фитнес-программа может быть
+              использована для достижения любой цели, от улучшения здоровья до
+              снижения веса и повышения производительности.
+            </p>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Предыдущий</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Следующий</span>
+        </button>
+      </div>
+      <!-- алерт при неправильном входе -->
+      <div class="log-in-alert">Ваши данные для входа неверны!</div>
+      <!-- модал окно (вход) -->
+      <div class="modal_window hidden">
+        <button class="close-modal-window">&times;</button>
+        <form>
+          <input class="user-log-in" type="text" placeholder="Login" />
+          <input class="pass-log-in" type="password" placeholder="Password" />
+          <button type="submit" class="modal_window_btn">ВХОД</button>
+        </form>
+        <p>
+          Нет аккаунта? Тогда
+          <a class="register-link" href="#">зарегистрируйтесь</a> прямо сейчас!
+          Или войдите с помощью :
+        </p>
+        <img src="img/google.svg" alt="" />
+        <img src="img/github.svg" alt="" />
+        <img src="img/facebook.svg" alt="" />
+      </div>
+
+      <!-- модал окно (регистрация) -->
+      <div class="modal-window_register hidden">
+        <button class="close_modal_window">&times;</button>
+        <form>
+          <input class="user-log-up" type="text" placeholder="Login" />
+          <input class="pass-log-up" type="password" placeholder="Password" />
+          <button type="submit" class="register_window_btn">Регистрация</button>
+        </form>
+        <p>
+          Уже зарегистрированы? Тогда
+          <a class="logIn-link" href="#">войдите</a> в свой аккаунт!
+        </p>
+      </div>
+      <!-- Вторая секция -->
+      <section class="second_main">
+        <div class="second_main_first">
+          <h1 class="second_title">
+            НЕ ТЕРЯЙ ВРЕМЯ И СТРОЙ СВОЕ БУДУЩЕЕ СЕЙЧАС
+          </h1>
+          <p class="second_par">
+            Change Your Body, Change Your Mindset. Our program has everything
+            you need to get results. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt.
+          </p>
+        </div>
+        <div class="sum_cont">
+          <div class="first__cont">
+            <span></span>
+            <img class="first__cont-img" src="img/вес.png" alt="" />
+            <h2>ПОТЕРЯ ВЕСА</h2>
+            <p>Просто какой то текст о пользе бега.</p>
+          </div>
+          <div class="second_cont">
+            <span></span>
+            <img src="img/тело.png" alt="" />
+            <h2>ВАШЕ ИДЕАЛЬНОЕ ТЕЛО</h2>
+            <p>Просто какой то текст о пользе бега.</p>
+          </div>
+          <div class="third_cont">
+            <span></span>
+            <img src="img/энергия.png" alt="" />
+            <h2>БОЛЬШЕ ЭНЕРГИИ</h2>
+            <p>Просто какой то текст о пользе бега.</p>
+          </div>
+          <div class="forth_cont">
+            <span></span>
+            <img src="img/боль.png" alt="" />
+            <h2>МЕНЬШЕ БОЛИ</h2>
+            <p>Просто какой то текст о пользе бега.</p>
+          </div>
+        </div>
+      </section>
+      <section class="third_main">
+        <h2 class="subscribe"><b>ПОДПИШИТЕСЬ НА РАССЫЛКУ НОВОСТЕЙ</b></h2>
+        <p class="news">
+          Хотите первым читать наши новости? Подпишитесь на рассылку, чтобы быть
+          в курсе всех событий.
+        </p>
+        <form>
+          <input
+            class="e_mail"
+            type="email"
+            placeholder="Укажите свой E-mail"
+            required="@"
+          />
+          <button class="btn_submit" type="submit">Отправить</button>
+        </form>
+        <h2 class="evo">
+          <b>Также Следите за развитием нашего проекта в соц. сетях</b>
+        </h2>
+        <div class="icons_footer">
+          <img src="img/github.svg" alt="" />
+          <img src="img/instagram.svg" alt="" />
+          <img src="img/telegram.svg" alt="" />
+          <img src="img/twitter.svg" alt="" />
+        </div>
+        <p class="rights">©Cardio corp. All rigths reserved.</p>
+      </section>
+      <style>
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
+        a:hover {
+          color: #6e6e6e;
+        }
+      </style>
+    </section>
+    <!-- ВТОРАЯ СТРАНИЦА -->
+    <section id="second_page" class="hidden">
+      <div class="overlay_2 hidden"></div>
+      <span class="your_name">Здраствуйте, L1MB0!</span>
+
+      <!-- аватар -->
+      <div class="avatar-load">
+        <img src="img/download.svg" alt="" />
+        <input type="file" id="avatarInput" accept="image/*" />
+      </div>
+      <div id="avatarPreview"></div>
+
+      <ul class="parameters">
+        <li id="name-li">Имя: Евгений</li>
+        <li id="age-li">Возраст: 42</li>
+        <li id="weight-li">Вес: 80</li>
+        <li id="height-li">Рост: 175</li>
+      </ul>
+      <ul class="settings">
+        <li>
+          <a href="#"><img src="img/calc.svg" alt="" /></a>
+        </li>
+        <li class="open-settings">
+          <a href="#"><img src="img/Frame.svg" alt="" /></a>
+        </li>
+      </ul>
+      <img src="img/back-arrow-svgrepo-com 1.svg" class="back-arrow" />
+
+      <!-- настройки -->
+      <div class="modal_window_settings hidden">
+        <button class="close-settings-window">&times;</button>
+        <form>
+          <input id="user-name" type="text" placeholder="Ваше Имя" />
+          <input id="user-age" type="text" placeholder="Ваш Возраст" />
+          <input id="user-weight" type="text" placeholder="Ваш Вес" />
+          <input id="user-height" type="text" placeholder="Ваш Рост" />
+          <button type="submit" class="modal-save-btn">Сохранить</button>
+        </form>
+      </div>
+
+      <!-- Кнопка калькулятор -->
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop"
+        style="
+          position: absolute;
+          display: flex;
+          gap: 65px;
+          top: 30px;
+          right: 190px;
+          opacity: 0;
+        "
+      >
+        <img src="img/calc.svg" alt="" style="opacity: 1" />
+      </button>
+
+      <!-- Модальное окно Калькулятор-->
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                Ваш Индекс Массы Тела:
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Закрыть"
+              ></button>
+            </div>
+            <div class="modal-body body-modal"></div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Закрыть
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="rights-2">©Cardio corp. All rigths reserved.</span>
+
+      <!-- График -->
+      <canvas id="myChart" width="700" height="790"></canvas>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
